@@ -1,0 +1,147 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<!-- signin-signup41:11-->
+
+<head>
+    <!-- Basic Page Needs
+	================================================== -->
+    {% block title %}
+    <title>Base</title>
+    {% endblock title %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+	================================================== -->
+    <link rel="stylesheet" href="{% static 'home/plugins/css/plugins.css' %}">
+
+    <!-- Custom style -->
+    <link href="{% static 'home/css/style.css' %}" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" id="jssDefault" href="{% static 'home/css/colors/green-style.css' %}">
+
+</head>
+
+<body>
+    <div class="Loader"></div>
+    <div class="wrapper">
+
+        {% include './navbar.html' %}
+
+        <div class="clearfix"></div>
+
+
+        {% block body_content %}
+        <h1>This is base page body content</h1>
+        {% endblock body_content %}
+        
+
+        {% include './footer.html' %}
+
+        <!-- Sign Up Window Code -->
+        <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="tab" role="tabpanel">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#login" role="tab"
+                                        data-toggle="tab">Sign In</a></li>
+                                <li role="presentation"><a href="#register" role="tab" data-toggle="tab">Sign Up</a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content" id="myModalLabel2">
+                                <div role="tabpanel" class="tab-pane fade in active" id="login">
+                                    <img src="{% static 'home/img/logo.png' %}" class="img-responsive" alt="" />
+                                    <div class="subscribe wow fadeInUp">
+                                        <form class="form-inline" method="post">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <input type="email" name="email" class="form-control"
+                                                        placeholder="Username" required="">
+                                                    <input type="password" name="password" class="form-control"
+                                                        placeholder="Password" required="">
+                                                    <div class="center">
+                                                        <button type="submit" id="login-btn" class="submit-btn"> Login
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane fade" id="register">
+                                    <img src="{% static 'home/img/logo.png' %}" class="img-responsive" alt="" />
+                                    <form class="form-inline" method="post">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <input type="text" name="email" class="form-control"
+                                                    placeholder="Your Name" required="">
+                                                <input type="email" name="email" class="form-control"
+                                                    placeholder="Your Email" required="">
+                                                <input type="email" name="email" class="form-control"
+                                                    placeholder="Username" required="">
+                                                <input type="password" name="password" class="form-control"
+                                                    placeholder="Password" required="">
+                                                <div class="center">
+                                                    <button type="submit" id="subscribe" class="submit-btn"> Create
+                                                        Account </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Sign Up Window -->
+
+
+        <!-- Scripts
+			================================================== -->
+        <script type="text/javascript" src="{% static 'home/plugins/js/jquery.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'home/plugins/js/viewportchecker.js' %}"></script>
+        <script type="text/javascript" src="{% static 'home/plugins/js/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'home/plugins/js/bootsnav.js' %}"></script>
+        <script type="text/javascript" src="{% static 'home/plugins/js/select2.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'home/plugins/js/wysihtml5-0.3.0.js' %}"></script>
+        <script type="text/javascript" src="{% static 'home/plugins/js/bootstrap-wysihtml5.js' %}"></script>
+        <script type="text/javascript" src="{% static 'home/plugins/js/datedropper.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'home/plugins/js/dropzone.js' %}"></script>
+        <script type="text/javascript" src="{% static 'home/plugins/js/loader.js' %}"></script>
+        <script type="text/javascript" src="{% static 'home/plugins/js/owl.carousel.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'home/plugins/js/slick.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'home/plugins/js/gmap3.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'home/plugins/js/jquery.easy-autocomplete.min.js' %}"></script>
+
+        <!-- Custom Js -->
+        <script src="{% static 'home/js/custom.js' %}"></script>
+        <script src="{% static 'home/js/jQuery.style.switcher.js' %}"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#styleOptions').styleSwitcher();
+            });
+        </script>
+        <script>
+            function openRightMenu() {
+                document.getElementById("rightMenu").style.display = "block";
+            }
+
+            function closeRightMenu() {
+                document.getElementById("rightMenu").style.display = "none";
+            }
+        </script>
+    </div>
+</body>
+
+<!-- signin-signup41:11-->
+
+</html>

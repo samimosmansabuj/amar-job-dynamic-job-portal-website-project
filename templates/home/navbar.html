@@ -1,0 +1,43 @@
+{% load static %}
+<nav class="navbar navbar-default navbar-fixed navbar-transparent white bootsnav">
+    <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i
+                class="fa fa-bars"></i></button>
+        <div class="navbar-header"><a class="navbar-brand" href="{% url 'index' %}"><img
+                    src="{% static 'home/img/logo-white.png' %}" class="logo logo-display" alt=""><img
+                    src="{% static 'home/img/logo-white.png' %}" class="logo logo-scrolled" alt=""></a></div>
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                <li class="left-br"><a href="javascript:void(0)" data-toggle="modal" data-target="#signup"
+                        class="signin">Sign In Now</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                <li class="dropdown megamenu-fw">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Brows</a>
+                    <ul class="dropdown-menu megamenu-content" role="menu">
+                        <li>
+                            <div class="row">
+                                <div class="col-menu col-md-3">
+                                    <h6 class="title">Main Pages</h6>
+                                </div>
+                                <div class="col-menu col-md-3">
+                                    <h6 class="title">For Candidate</h6>
+
+                                    <div class="content">
+                                        <ul class="menu-col">
+                                            <li><a href="browse-jobs.html">Browse Jobs</a></li>
+                                            <li><a href="browse-company.html">Browse Companies</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="{% url 'registration' %}"><i class="fa fa-pencil" aria-hidden="true"></i>SignUp</a></li>
+                <li><a href="pricing.html"><i class="fa fa-sign-in" aria-hidden="true"></i>Pricing</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
