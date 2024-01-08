@@ -34,13 +34,30 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="">Blog</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                <li><a href="{% url 'registration' %}"><i class="fa fa-pencil" aria-hidden="true"></i>SignIn</a></li>
+                
                 <li><a href="pricing.html"><i class="fa fa-sign-in" aria-hidden="true"></i>Pricing</a></li>
-                <li class="left-br"><a href="javascript:void(0)" data-toggle="modal" data-target="#signup"
-                        class="signin">Sign In Now</a></li>
+                
+                {% if request.user.is_authenticated %}
+                <li>
+                    <a href="{% url 'signout' %}">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                        Sign Out
+                    </a>
+                </li>
+                <li class="left-br"><a href="" class="signin">My Account</a></li>
+                {% else %}
+                <li>
+                    <a href="{% url 'signin' %}">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                        SignIn
+                    </a>
+                </li>
+                <li class="left-br"><a href="javascript:void(0)" data-toggle="modal" data-target="#signup" class="signin">Sign In Now</a></li>
+                {% endif %}
+                
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>

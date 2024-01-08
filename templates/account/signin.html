@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-<title>Sign Up - Amar Job</title>
+<title>Sign In - Amar Job</title>
 {% endblock title %}
 
 
@@ -21,36 +21,23 @@
                             {% csrf_token %}
                             <fieldset>
                                 <div class="form-group">
-                                    {{form.first_name}}
+                                    <input type="text" class="form-control" placeholder="Enter Your Username" name="username">
                                 </div>
                                 <div class="form-group">
-                                    {{form.last_name}}
+                                    <input type="password" class="form-control" placeholder="Enter Your Password" name="password">
                                 </div>
-                                <div class="form-group">
-                                    {{form.username}}
-                                </div>
-                                <div class="form-group">
-                                    {{form.email}}
-                                </div>
-                                <div class="form-group">
-                                    {{form.phone_number}}
-                                </div>
-                                <div class="form-group">
-                                    {{form.user_type}}
-                                </div>
-                                <div class="form-group">
-                                    {{form.password}}
-                                </div>
-                                <a href="" class="btn btn-login">Sign Up</a>
+                                <a href="" class="btn btn-login">Sign In</a>
+                                <br>
+                                <p>You have no account? <a href="{% url 'registration' %}">Registration</a></p>
                             </fieldset>
                         </form>
 
-                        <ul class="social-login">
+                        <!-- <ul class="social-login">
                             <li class="facebook-login"><a href="#"><i class="fa fa-facebook"></i>Facebook</a>
                             </li>
                             <span>OR</span>
                             <li class="google-plus-login"><a href="#"><i class="fa fa-google-plus"></i>Facebook</a></li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
             </div>

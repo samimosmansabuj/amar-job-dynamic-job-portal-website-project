@@ -1,0 +1,63 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Sign Up - Amar Job</title>
+{% endblock title %}
+
+
+{% block body_content %}
+<section class="login-plane-sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Create An Account</h3>
+                    </div>
+                    <div class="panel-body">
+                        <img src="{% static 'home/img/logo.png' %}" class="img-responsive" />
+                        <form role="form" method="POST">
+                            {% csrf_token %}
+                            <fieldset>
+                                <div class="form-group">
+                                    {{form.first_name}}
+                                </div>
+                                <div class="form-group">
+                                    {{form.last_name}}
+                                </div>
+                                <div class="form-group">
+                                    {{form.username}}
+                                </div>
+                                <div class="form-group">
+                                    {{form.email}}
+                                </div>
+                                <div class="form-group">
+                                    {{form.phone_number}}
+                                </div>
+                                <div class="form-group">
+                                    {{form.user_type}}
+                                </div>
+                                <div class="form-group">
+                                    {{form.password}}
+                                </div>
+                                <a href="" class="btn btn-login">Sign Up</a>
+                                <br>
+                                <p>You have already an account? <a href="{% url 'signin' %}">Login</a></p>
+                            </fieldset>
+                        </form>
+
+                        <!-- <ul class="social-login">
+                            <li class="facebook-login"><a href="#"><i class="fa fa-facebook"></i>Facebook</a>
+                            </li>
+                            <span>OR</span>
+                            <li class="google-plus-login"><a href="#"><i class="fa fa-google-plus"></i>Facebook</a></li>
+                        </ul> -->
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body_content %}
