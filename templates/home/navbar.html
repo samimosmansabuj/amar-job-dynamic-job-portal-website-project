@@ -18,15 +18,12 @@
                         <li>
                             <div class="row">
                                 <div class="col-menu col-md-3">
-                                    <h6 class="title">Main Pages</h6>
-                                </div>
-                                <div class="col-menu col-md-3">
                                     <h6 class="title">For Candidate</h6>
 
                                     <div class="content">
                                         <ul class="menu-col">
-                                            <li><a href="browse-jobs.html">Browse Jobs</a></li>
-                                            <li><a href="browse-company.html">Browse Companies</a></li>
+                                            <li><a href="{% url 'all_job' %}">Browse Jobs</a></li>
+                                            <li><a href="{% url 'all_job' %}">Browse Companies</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -34,9 +31,9 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="">Blog</a></li>
                 <li><a href="{% url 'registration' %}"><i class="fa fa-pencil" aria-hidden="true"></i>SignUp</a></li>
-                <li><a href="pricing.html"><i class="fa fa-sign-in" aria-hidden="true"></i>Pricing</a></li>
+                <li><a href=""><i class="fa fa-sign-in" aria-hidden="true"></i>Pricing</a></li>
             </ul>
         </div>
     </div>
